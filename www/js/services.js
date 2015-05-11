@@ -1,4 +1,48 @@
-angular.module('wheresapp.services', [])
+angular.module('wheresapp.services', ['firebase'])
+.factory("Auth", ["$firebaseAuth", "$rootScope", function ($firebaseAuth, $rootScope) {
+  var ref = new Firebase(firebaseUrl);
+  return $firebaseAuth(ref);
+}])
+
+.factory('Items', function ($firebase) {
+
+    var ref = new Firebase(firebaseUrl);
+    var items;
+
+    return {
+        all: function () {
+            return items;
+        },
+        remove: function (item) {
+            items.$remove(item).then(function (ref) {
+                ref.key() === item.$id; // true item has been removed
+            });
+        },
+        get: function (itemId) {
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].id === parseInt(itemId)) {
+                    return items[i];
+                }
+            }
+            return null;
+        },
+        add: function (name, description, location) {
+            console.log("adding item: [name:" + name + ", description:  " + description + ", location: " + location + "]");
+            if (name && location) {
+                var itemRecord = {
+                    name: name,
+                    description: message,
+                    location: location,
+                    createdAt: Firebase.ServerValue.TIMESTAMP
+                };
+                items.$add(itemRecord).then(function (data) {
+                    console.log("item added");
+                });
+            }
+        }
+    }
+})
+
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
