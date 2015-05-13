@@ -1,23 +1,24 @@
-<ion-modal-view>
-    <ion-header-bar class="bar bar-header bar-positive">
-        <h1 class="title">Add a new item</h1>
-        <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
-    </ion-header-bar>
-    <ion-content class="padding">
-        <div class="list">
-            <label class="item item-input">
-                <span class="input-label">Name</span>
-                <input ng-model="item.name" type="text">
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Description</span>
-                <input ng-model="item.description" type="text">
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Location</span>
-                <input ng-model="item.location" type="text">
-            </label>
-            <button class="button button-full button-positive" ng-click="createUser(user)">Add</button>
-        </div>
-    </ion-content>
-</ion-modal-view>
+<ion-view view-title="Dashboard">
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button class="button-clear">
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content class="padding">
+      <div class="list">
+          <label class="item item-input">
+              <span class="input-label">Name</span>
+              <input ng-model="item.name" type="text">
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Description</span>
+              <input ng-model="item.description" type="text">
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Location</span>
+              <input ng-model="item.location" type="text">
+          </label>
+          <button class="button button-full button-positive" ng-click="addItem(item)">Add</button>
+      </div>
+  </ion-content>
+</ion-view>

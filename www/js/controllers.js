@@ -2,14 +2,14 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
 
 .controller('LoginCtrl', function ($scope, $ionicModal, $state, $firebaseAuth, $ionicLoading, $rootScope) {
     //console.log('Login Controller Initialized');
-    
+
     // console.log($scope);
     // console.log($ionicModal);
     // console.log($state);
     // console.log($firebaseAuth);
     // console.log($ionicLoading);
     // console.log($rootScope);
-    
+
     // TODO: the sample app shows reading this from the $scope param
     var ref = new Firebase(firebaseUrl);
     var auth = $firebaseAuth(ref);
@@ -57,6 +57,9 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
                 password: user.pwdForLogin
             }).then(function (authData) {
                 console.log("Logged in as:" + authData.uid);
+                console.log(authData);
+                console.log(user);
+                $rootScope.uid = authData.uid;
                 ref.child("users").child(authData.uid).once('value', function (snapshot) {
                     var val = snapshot.val();
                     // To Update AngularJS $scope either use $apply or $timeout
@@ -77,16 +80,39 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ItemsCtrl', function($scope, Items) {
-  $scope.items = Items.all();
+.controller('AddItemCtrl', function($scope, $state, $location, $rootScope, $firebaseArray, Items) {
+  // TODO: should the firebase ref come from the services?
+  //$scope.items = Items.all();
+  var ref = new Firebase(firebaseUrl + "/" + $rootScope.uid + "/items");
+  console.log($rootScope.uid);
+  $scope.items = $firebaseArray(ref);
+  
+  $scope.addItem = function(item) {
+    console.log("AddItemsCtrl.addItem()");
+    $scope.items.$add(item);
+    $state.go('tab.items');
+  };
+})
+
+.controller('ItemsCtrl', function($scope, $state, $location, $rootScope, $firebaseArray, Items) {
+  // TODO: should the firebase ref come from the services?
+  //$scope.items = Items.all();
+  var ref = new Firebase(firebaseUrl + "/" + $rootScope.uid + "/items");
+  console.log($rootScope.uid);
+  $scope.items = $firebaseArray(ref);
+  
   $scope.remove = function(item) {
-    Items.remove(item);
+    $scope.items.remove(item);
   }
 })
 
 .controller('ItemDetailCtrl', function($scope, $stateParams, Items) {
   $scope.item = Items.get($stateParams.itemId);
 })
+
+
+
+
 
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
@@ -105,4 +131,3 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
     enableFriends: true
   };
 });
-

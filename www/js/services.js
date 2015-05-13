@@ -4,7 +4,7 @@ angular.module('wheresapp.services', ['firebase'])
   return $firebaseAuth(ref);
 }])
 
-.factory('Items', function ($firebase) {
+.factory('Items', function ($firebase, $rootScope) {
 
     var ref = new Firebase(firebaseUrl);
     var items;
@@ -26,8 +26,9 @@ angular.module('wheresapp.services', ['firebase'])
             }
             return null;
         },
-        add: function (name, description, location) {
-            console.log("adding item: [name:" + name + ", description:  " + description + ", location: " + location + "]");
+        add: function (item) {
+            console.log("adding item: [name:" + item.name + ", description:  " + item.description + ", location: " + item.location + "]");
+            console.log($rootScope);
             if (name && location) {
                 var itemRecord = {
                     name: name,
@@ -91,4 +92,4 @@ angular.module('wheresapp.services', ['firebase'])
       return null;
     }
   };
-});
+})

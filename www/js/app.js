@@ -22,19 +22,21 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
       // org.apache.cordova.statusbar required
       StatusBar.styleLightContent();
     }
-    
+
     // To Resolve Bug
     ionic.Platform.fullScreen();
-    
+
     $rootScope.getFirebaseUrl = function(){
       return firebaseUrl;
     }
-    
+
     $rootScope.displayName = null;
-    
+    $rootScope.uid = null;
+
     Auth.$onAuth(function (authData) {
       if (authData) {
         console.log("Logged in as:", authData.uid);
+        $rootScope.uid = authData.uid;
       } else {
         console.log("Logged out");
         $ionicLoading.hide();
@@ -48,6 +50,11 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
         template: 'Logging Out...'
       });
       Auth.$unauth();
+    }
+
+    $rootScope.addItem = function(){
+      console.log("add an item now");
+      $location.path('/additem');
     }
     
     $rootScope.$on("$stateChangeError", function (event, toState, toParams, fromState, fromParams, error) {
@@ -74,6 +81,22 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
     url: "/login",
     templateUrl: "templates/login.html",
     controller: 'LoginCtrl',
+    resolve: {
+      // controller will not be loaded until $waitForAuth resolves
+      // Auth refers to our $firebaseAuth wrapper in the example above
+      "currentAuth": ["Auth",
+        function (Auth) {
+          // $waitForAuth returns a promise so the resolve waits for it to complete
+          return Auth.$waitForAuth();
+        }]
+    }
+  })
+
+  // State to represent add item View
+  .state('additem', {
+    url: "/additem",
+    templateUrl: "templates/additem.html",
+    controller: 'AddItemCtrl',
     resolve: {
       // controller will not be loaded until $waitForAuth resolves
       // Auth refers to our $firebaseAuth wrapper in the example above
@@ -166,5 +189,3 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
   $urlRouterProvider.otherwise('/login');
 
 });
-
-
