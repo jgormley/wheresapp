@@ -81,25 +81,14 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
 .controller('DashCtrl', function($scope) {})
 
 .controller('AddItemCtrl', function($scope, $state, $location, $rootScope, $firebaseArray, Items) {
-  // TODO: should the firebase ref come from the services?
-  //$scope.items = Items.all();
-  var ref = new Firebase(firebaseUrl + "/" + $rootScope.uid + "/items");
-  console.log($rootScope.uid);
-  $scope.items = $firebaseArray(ref);
-  
   $scope.addItem = function(item) {
-    console.log("AddItemsCtrl.addItem()");
-    $scope.items.$add(item);
+    Items.add(item);
     $state.go('tab.items');
   };
 })
 
 .controller('ItemsCtrl', function($scope, $state, $location, $rootScope, $firebaseArray, Items) {
-  // TODO: should the firebase ref come from the services?
-  //$scope.items = Items.all();
-  var ref = new Firebase(firebaseUrl + "/" + $rootScope.uid + "/items");
-  console.log($rootScope.uid);
-  $scope.items = $firebaseArray(ref);
+  $scope.items = Items.all();
   
   $scope.remove = function(item) {
     $scope.items.remove(item);
@@ -107,6 +96,8 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
 })
 
 .controller('ItemDetailCtrl', function($scope, $stateParams, Items) {
+  console.log($stateParams);
+  console.log("get this item: " + $stateParams.itemId);
   $scope.item = Items.get($stateParams.itemId);
 })
 

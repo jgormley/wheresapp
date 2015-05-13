@@ -31,12 +31,10 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
     }
 
     $rootScope.displayName = null;
-    $rootScope.uid = null;
 
     Auth.$onAuth(function (authData) {
       if (authData) {
         console.log("Logged in as:", authData.uid);
-        $rootScope.uid = authData.uid;
       } else {
         console.log("Logged out");
         $ionicLoading.hide();
@@ -136,25 +134,6 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
       }
     }
   })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
 
   .state('tab.items', {
       url: '/items',

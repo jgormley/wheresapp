@@ -4,10 +4,11 @@ angular.module('wheresapp.services', ['firebase'])
   return $firebaseAuth(ref);
 }])
 
-.factory('Items', function ($firebase, $rootScope) {
-
-    var ref = new Firebase(firebaseUrl);
-    var items;
+.factory('Items', function ($firebase, $rootScope, $firebaseArray, Auth) {
+  
+    var uid = Auth.$getAuth().uid;
+    var ref = new Firebase(firebaseUrl + "/" + uid + "/items");
+    var items = $firebaseArray(ref);
 
     return {
         all: function () {
@@ -19,12 +20,13 @@ angular.module('wheresapp.services', ['firebase'])
             });
         },
         get: function (itemId) {
-            for (var i = 0; i < items.length; i++) {
-                if (items[i].id === parseInt(itemId)) {
-                    return items[i];
-                }
-            }
-            return null;
+          return items.$getRecord(itemId);
+            // for (var i = 0; i < items.length; i++) {
+            //     if (items[i].id === parseInt(itemId)) {
+            //         return items[i];
+            //     }
+            // }
+            // return null;
         },
         add: function (item) {
             console.log("adding item: [name:" + item.name + ", description:  " + item.description + ", location: " + item.location + "]");
@@ -40,6 +42,10 @@ angular.module('wheresapp.services', ['firebase'])
                     console.log("item added");
                 });
             }
+            
+            console.log("AddItemsCtrl.addItem()");
+            items.$add(item);
+            
         }
     }
 })

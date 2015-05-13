@@ -1,7 +1,7 @@
 <ion-view view-title="Items">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items" type="item-text-wrap" href="#/tab/items/{{item.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items" type="item-text-wrap" href="#/tab/items/{{item.$id}}">
         <h2>{{item.name}}</h2>
         <p>{{item.description}}</p>
         <p>{{item.location}}</p>
