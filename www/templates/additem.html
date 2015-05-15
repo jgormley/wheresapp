@@ -1,9 +1,4 @@
-<ion-view view-title="Dashboard">
-  <ion-nav-bar class="bar-stable">
-    <ion-nav-back-button class="button-clear">
-    </ion-nav-back-button>
-  </ion-nav-bar>
-
+<ion-view view-title="New Item">
   <ion-content class="padding">
       <div class="list">
           <label class="item item-input">
@@ -18,7 +13,14 @@
               <span class="input-label">Location</span>
               <input ng-model="item.location" type="text">
           </label>
-          <button class="button button-full button-positive" ng-click="addItem(item)">Add</button>
+          
+          <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
+          <div id="mapContainer">
+            <div id="map" data-tap-disabled="true"></div>
+          </div>
+          
+          <button class="button button-positive" ng-click="addItem(item)">Add</button>
+          <button class="button button-negative" ng-click="cancel()">Cancel</button>
       </div>
   </ion-content>
 </ion-view>

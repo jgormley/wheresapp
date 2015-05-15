@@ -125,16 +125,6 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-
   .state('tab.items', {
       url: '/items',
       views: {
@@ -154,15 +144,15 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+    .state('tab.info', {
+      url: '/info',
+      views: {
+        'tab-info': {
+          templateUrl: 'templates/tab-info.html',
+          controller: 'InfoCtrl'
+        }
       }
-    }
-  });
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');

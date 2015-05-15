@@ -22,10 +22,14 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <!-- your app's js -->
+    <!-- app js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
+    
+    <!-- google maps javascript -->
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+    
 
   </head>
   <body ng-app="wheresapp">
@@ -37,7 +41,7 @@
       </ion-nav-back-button>
       <ion-nav-buttons side="right">
         <button class="button-clear button header-item" ng-click="addItem()">
-          <i class="icon ion-plus"></i>
+          <i class="icon ion-ios-plus-empty"></i>
         </button>
       </ion-nav-buttons>
     </ion-nav-bar>
