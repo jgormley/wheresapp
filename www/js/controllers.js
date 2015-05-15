@@ -71,7 +71,7 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
 
 .controller('AddItemCtrl', function($scope, $state, $ionicLoading, $compile, Items) {
   // TODO: put the model object somewhere reusable
-  $scope.item = {"name": "", "description": "", "location": ""};
+  $scope.item = {"name": "", "description": "", "location": {"long": "", "lat": ""}};
   
   function initialize() {
     console.log('initialize map');
@@ -86,28 +86,20 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
     var map = new google.maps.Map(document.getElementById("map"),
         mapOptions);
     
-    //Marker + infowindow + angularjs compiled ng-click
-    var contentString = "<div><a ng-click='clickTest()'>You clicked me!</a></div>";
-    var compiled = $compile(contentString)($scope);
+    console.log('map ', map);
 
-    var infowindow = new google.maps.InfoWindow({
-      content: compiled[0]
-    });
-
-    var marker = new google.maps.Marker({
+    $scope.marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
-      title: 'Uluru (Ayers Rock)'
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map,marker);
+      draggable:true
     });
 
     $scope.map = map;
     console.log('$scope.map = ', map);
   }
-  google.maps.event.addDomListener(window, 'load', initialize);
+  // TODO: is there risk of not waiting for the load event?
+  //google.maps.event.addDomListener(window, 'load', initialize);
+  initialize();
   
   $scope.centerOnMe = function() {
     if(!$scope.map) {
@@ -121,23 +113,27 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
     });
 
     navigator.geolocation.getCurrentPosition(function(pos) {
-      $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+      $scope.item.location.lat = pos.coords.latitude;
+      $scope.item.location.long = pos.coords.longitude;
+      var latLng = new google.maps.LatLng( pos.coords.latitude, pos.coords.longitude );
+      console.log(pos.coords.latitude, pos.coords.longitude);
+      
+      $scope.marker.setPosition(latLng);
+      $scope.map.panTo(latLng);
+      
+      //$scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+      
       $ionicLoading.hide();
     }, function(error) {
       alert('Unable to get location: ' + error.message);
     });
   };
   
-  $scope.clickTest = function() {
-    alert('Example of infowindow with ng-click')
-  };
-  
-  
   
   $scope.addItem = function(item) {
     Items.add(item);
     // clear out the model object so the next time we add an item, the form is reset
-    $scope.item = {"name": "", "description": "", "location": ""};
+    $scope.item = {"name": "", "description": "", "location": {"long": "", "lat": ""}};
     $state.go('tab.items');
   };
   

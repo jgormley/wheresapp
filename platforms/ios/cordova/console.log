@@ -10,3 +10,32 @@
 2015-05-15 00:45:07.416 wheresApp[39673:19950896] Unlimited access to network resources
 2015-05-15 00:45:08.219 wheresApp[39673:19950896] Resetting plugins due to page load.
 2015-05-15 00:45:09.561 wheresApp[39673:19950896] Finished load of: file:///Users/josh/Library/Developer/CoreSimulator/Devices/7CF93380-0DE5-414B-9123-0F0E7B711E5B/data/Containers/Bundle/Application/94E10F9D-A4E8-4CC5-B7E4-43BC43D19B3C/wheresApp.app/www/index.html#/login
+2015-05-15 00:50:51.905 wheresApp[39920:19985305] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/josh/Library/Developer/CoreSimulator/Devices/7CF93380-0DE5-414B-9123-0F0E7B711E5B/data/Containers/Data/Application/3FB70F0F-3D46-4130-A27B-07BD26053A82/Library/Cookies/Cookies.binarycookies
+2015-05-15 00:50:52.118 wheresApp[39920:19985305] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 00:50:52.119 wheresApp[39920:19985305] Multi-tasking -> Device: YES, App: YES
+2015-05-15 00:50:52.143 wheresApp[39920:19985305] Unlimited access to network resources
+2015-05-15 00:50:52.852 wheresApp[39920:19985305] Resetting plugins due to page load.
+2015-05-15 00:50:54.149 wheresApp[39920:19985305] Finished load of: file:///Users/josh/Library/Developer/CoreSimulator/Devices/7CF93380-0DE5-414B-9123-0F0E7B711E5B/data/Containers/Bundle/Application/B6762098-B31E-442B-B2A3-ECF84B068CAA/wheresApp.app/www/index.html#/login
+2015-05-15 00:51:58.012 wheresApp[39920:19990118] Communications error: <OS_xpc_error: <error: 0x2e6f5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2e6f83c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-05-15 00:51:58.015 wheresApp[39920:19993271] Terminating since there is no system app.
+2015-05-15 06:48:26.684 wheresApp[41261:20135238] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/josh/Library/Developer/CoreSimulator/Devices/7CF93380-0DE5-414B-9123-0F0E7B711E5B/data/Containers/Data/Application/9D00BA1F-787F-481B-B5B3-E6F9FF2F5207/Library/Cookies/Cookies.binarycookies
+2015-05-15 06:48:27.449 wheresApp[41261:20135238] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 06:48:27.450 wheresApp[41261:20135238] Multi-tasking -> Device: YES, App: YES
+2015-05-15 06:48:27.503 wheresApp[41261:20135238] Unlimited access to network resources
+2015-05-15 06:48:28.741 wheresApp[41261:20135238] Resetting plugins due to page load.
+2015-05-15 06:48:29.804 wheresApp[41261:20135238] Finished load of: http://192.168.1.135:8100/#/login
+2015-05-15 06:50:10.217 wheresApp[41261:20135238] Resetting plugins due to page load.
+2015-05-15 06:50:10.624 wheresApp[41261:20135238] Finished load of: http://192.168.1.135:8100/#/additem
+2015-05-15 06:51:05.903 wheresApp[41261:20135238] Resetting plugins due to page load.
+2015-05-15 06:51:06.277 wheresApp[41261:20135238] Finished load of: http://192.168.1.135:8100/#/additem
+2015-05-15 06:51:58.723 wheresApp[41261:20135238] Resetting plugins due to page load.
+2015-05-15 06:51:59.010 wheresApp[41261:20135238] Finished load of: http://192.168.1.135:8100/#/additem
+2015-05-15 06:52:09.111 wheresApp[41261:20135238] THREAD WARNING: ['Geolocation'] took '271.789062' ms. Plugin should use a background thread.
+2015-05-15 06:52:12.409 wheresApp[41261:20135238] locationManager::didFailWithError (null)
+2015-05-15 06:53:09.753 wheresApp[41261:20135238] Resetting plugins due to page load.
+2015-05-15 06:53:10.456 wheresApp[41261:20135238] Finished load of: http://192.168.1.135:8100/#/additem
+2015-05-15 07:10:42.326 wheresApp[41261:20195030] Communications error: <OS_xpc_error: <error: 0x2dda5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2dda83c> { length = 22, contents = "Connection interrupted" }
+}>
