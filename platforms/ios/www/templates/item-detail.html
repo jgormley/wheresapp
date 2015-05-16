@@ -6,15 +6,19 @@
 -->
 <ion-view view-title="{{item.name}}">
   <ion-content class="padding">
-    <p>
+    <h3>
       {{item.name}}
-    </p>
+    </h3>
     <p>
       {{item.description}}
     </p>
     <p>
-      {{item.location}}
+      {{item.location.lat}}, {{item.location.long}}
     </p>
+    
+    <div id="mapContainer">
+      <div id="map" data-tap-disabled="true"></div>
+    </div>
     
     <button class="button button-assertive button-full" ng-click="remove()">Delete</button>
   </ion-content>

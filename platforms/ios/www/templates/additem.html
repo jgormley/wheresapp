@@ -11,10 +11,11 @@
           </label>
           <label class="item item-input">
               <span class="input-label">Location</span>
-              <input ng-model="item.location" type="text">
+              <input ng-model="item.location.lat" type="text" disabled="disabled">
+              <input ng-model="item.location.long" type="text" disabled="disabled">
           </label>
           
-          <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
+          <a ng-click="centerMapOnUser()" class="button button-icon icon ion-navigate">Find Me</a>
           <div id="mapContainer">
             <div id="map" data-tap-disabled="true"></div>
           </div>

@@ -73,35 +73,7 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   // TODO: put the model object somewhere reusable
   $scope.item = {"name": "", "description": "", "location": {"long": "", "lat": ""}};
   
-  function initialize() {
-    console.log('initialize map');
-    
-    var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
-    
-    var mapOptions = {
-      center: myLatlng,
-      zoom: 16,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map"),
-        mapOptions);
-    
-    console.log('map ', map);
-
-    $scope.marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      draggable:true
-    });
-
-    $scope.map = map;
-    console.log('$scope.map = ', map);
-  }
-  // TODO: is there risk of not waiting for the load event?
-  //google.maps.event.addDomListener(window, 'load', initialize);
-  initialize();
-  
-  $scope.centerOnMe = function() {
+  $scope.centerMapOnUser = function() {
     if(!$scope.map) {
       console.log('no map');
       return;
@@ -129,7 +101,6 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
     });
   };
   
-  
   $scope.addItem = function(item) {
     Items.add(item);
     // clear out the model object so the next time we add an item, the form is reset
@@ -139,7 +110,40 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   
   $scope.cancel = function(){
     $state.go('tab.items');
+  };
+  
+  $scope.initialize = function() {
+    console.log('initialize map');
+    
+    var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+    
+    var mapOptions = {
+      center: myLatlng,
+      zoom: 16,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    
+    $scope.marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      draggable:true
+    });
+    
+    google.maps.event.addListener($scope.marker, 'dragend', function(){
+      var latLong = $scope.marker.getPosition();
+      $scope.item.location.lat = latLong.lat();
+      $scope.item.location.long = latLong.lng();
+      $scope.$apply();
+    });
+    
+    $scope.map = map;
+    
+    $scope.centerMapOnUser();
   }
+  
+  // TODO: is there a better way to kick off the init method?
+  $scope.initialize();
 })
 
 .controller('ItemsCtrl', function($scope, $state, Items) {
@@ -156,5 +160,30 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   $scope.remove = function() {
     Items.remove($scope.item);
     $state.go('tab.items');
+  };
+  
+  $scope.initialize = function() {
+    console.log('initialize map');
+    
+    var myLatlng = new google.maps.LatLng($scope.item.location.lat,$scope.item.location.long);
+    console.log(myLatlng);
+    
+    var mapOptions = {
+      center: myLatlng,
+      zoom: 16,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    
+    $scope.marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      draggable:false
+    });
+    
+    $scope.map = map;
   }
+  
+  // TODO: is there a better way to kick off the init method?
+  $scope.initialize();
 });
