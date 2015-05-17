@@ -11,7 +11,7 @@ var firebaseUrl = "https://wheresapp.firebaseio.com";
 // 'wheresapp.controllers' is found in controllers.js
 angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wheresapp.services'])
 
-.run(function($ionicPlatform, $rootScope, $location, Auth, $ionicLoading) {
+.run(function($ionicPlatform, $rootScope, $location, Auth, Session, $ionicLoading) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -35,6 +35,7 @@ angular.module('wheresapp', ['ionic', 'firebase', 'wheresapp.controllers', 'wher
     Auth.$onAuth(function (authData) {
       if (authData) {
         console.log("Logged in as:", authData.uid);
+        Session.updateSession();
       } else {
         console.log("Logged out");
         $ionicLoading.hide();

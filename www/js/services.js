@@ -4,15 +4,47 @@ angular.module('wheresapp.services', ['firebase'])
   return $firebaseAuth(ref);
 }])
 
-.factory('Items', function ($firebase, $rootScope, $firebaseArray, Auth) {
+.factory('Items', function ($firebase, $rootScope, $firebaseArray, Auth, Session) {
   
   var uid = Auth.$getAuth().uid;
   var ref = new Firebase(firebaseUrl + "/" + uid + "/items");
   var items = $firebaseArray(ref);
+  // once the items are loaded, sort them by distance
+  items.$loaded().then(function(array) {
+    console.log('items have been loaded, yippee! ', array);
+    
+    for (var i=0; i<array.length; i++) {
+      console.log(i, array[i]);
+      var item = array[i];
+      var thisLatLong = new google.maps.LatLng( item.location.lat, item.location.long );
+      var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(Session.getCurrentLocation(), thisLatLong);
+      var distanceInMiles = (Math.round((distanceInMeters * 0.000621371) * 100))/100;
+      console.log('distance: ', distanceInMiles);
+      item.distance = distanceInMiles;
+    };
 
+    sortedItems = items.sort(function(a,b){
+      if(a.distance > b.distance) return 1;
+      if(a.distance < b.distance) return -1;
+      return 0;
+    });
+    
+    array = sortedItems;
+  });
+  
   return {
+    newItem: function(){
+      return {
+        "name": "",
+        "description": "",
+        "location": {
+          "lat": 0,
+          "long": 0
+        }
+      }
+    },
     all: function () {
-        return items;
+      return items;
     },
     remove: function (item) {
       items.$remove(item).then(function (ref) {
@@ -33,13 +65,30 @@ angular.module('wheresapp.services', ['firebase'])
         };
         items.$add(itemRecord).then(function (data) {
           console.log("item added");
+          // TODO: sort the array based on distance from user
         });
       }
       
       console.log("AddItemsCtrl.addItem()");
       items.$add(item);
-        
     }
   }
-});
+})
 
+.factory('Session', function() {
+  var currentLocation;
+  var Session = {
+    getCurrentLocation: function(){return currentLocation;},
+    updateSession: function() { 
+      navigator.geolocation.getCurrentPosition(function(pos) {
+        currentLocation = new google.maps.LatLng( pos.coords.latitude, pos.coords.longitude );
+        console.log('session.updateSession, location = ', pos.coords.latitude, pos.coords.longitude);
+      }, function(error) {
+        alert('Unable to get location: ' + error.message);
+      });
+      
+    }
+  };
+  Session.updateSession();
+  return Session; 
+});

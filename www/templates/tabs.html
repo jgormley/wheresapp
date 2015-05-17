@@ -6,7 +6,12 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
   <!-- Items Tab -->
-  <ion-tab title="Items" icon-off="ion-ios-photos-outline" icon-on="ion-ios-photos" href="#/tab/items">
+  <ion-tab title="Map" icon-off="ion-ios-location-outline" icon-on="ion-ios-location" href="#/tab/map">
+    <ion-nav-view name="tab-map"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Items Tab -->
+  <ion-tab title="List" icon-off="ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/items">
     <ion-nav-view name="tab-items"></ion-nav-view>
   </ion-tab>
 

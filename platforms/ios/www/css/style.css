@@ -20,11 +20,19 @@
 
 #mapContainer {
   width: 100%;
-  height: 300px;
+  height: 350px;
 }
 #map {
   width: 100%;
   height: 100%;
+  z-index: 100;
+}
+
+#map-float-over .map-float-over {
+  position: absolute;
+  left: 0.1em;
+  top: 0.1em;
+  z-index: 500;
 }
 /*
 .scroll {

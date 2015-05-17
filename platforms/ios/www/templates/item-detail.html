@@ -5,16 +5,15 @@
   The Friends service returns an array of friend data
 -->
 <ion-view view-title="{{item.name}}">
-  <ion-content class="padding">
-    <h3>
-      {{item.name}}
-    </h3>
-    <p>
-      {{item.description}}
-    </p>
-    <p>
-      {{item.location.lat}}, {{item.location.long}}
-    </p>
+  <ion-content class="">
+    <div class="card padding">
+      <h3>
+        {{item.name}}
+      </h3>
+      <p>
+        {{item.description}}
+      </p>
+    </div>
     
     <div id="mapContainer">
       <div id="map" data-tap-disabled="true"></div>

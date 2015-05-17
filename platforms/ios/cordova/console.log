@@ -121,3 +121,267 @@
 2015-05-15 23:04:42.028 wheresApp[948:2281778] Unlimited access to network resources
 2015-05-15 23:04:42.710 wheresApp[948:2281778] Resetting plugins due to page load.
 2015-05-15 23:04:43.515 wheresApp[948:2281778] Finished load of: http://192.168.1.127:8100/#/login
+2015-05-16 20:27:13.235 wheresApp[37301:2590575] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jgormley/Library/Developer/CoreSimulator/Devices/4C6CDEBF-1B02-4BE4-AEC0-9666E48C33EC/data/Containers/Data/Application/1941337D-0C06-4263-9E63-DFD527EFD2E0/Library/Cookies/Cookies.binarycookies
+2015-05-16 20:27:13.510 wheresApp[37301:2590575] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-16 20:27:13.511 wheresApp[37301:2590575] Multi-tasking -> Device: YES, App: YES
+2015-05-16 20:27:13.530 wheresApp[37301:2590575] Unlimited access to network resources
+2015-05-16 20:27:14.070 wheresApp[37301:2590575] Resetting plugins due to page load.
+2015-05-16 20:27:14.496 wheresApp[37301:2590575] Finished load of: file:///Users/jgormley/Library/Developer/CoreSimulator/Devices/4C6CDEBF-1B02-4BE4-AEC0-9666E48C33EC/data/Containers/Bundle/Application/4AA1683D-E8AE-4611-98C7-FB0DF993DD0A/wheresApp.app/www/index.html#/login
+2015-05-16 20:27:24.136 wheresApp[37301:2590708] Terminating since there is no system app.
+2015-05-16 20:27:44.311 wheresApp[37503:2591635] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jgormley/Library/Developer/CoreSimulator/Devices/4C6CDEBF-1B02-4BE4-AEC0-9666E48C33EC/data/Containers/Data/Application/698E7811-1EC1-4C11-8D5D-809B190A9CD4/Library/Cookies/Cookies.binarycookies
+2015-05-16 20:27:44.467 wheresApp[37503:2591635] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-16 20:27:44.467 wheresApp[37503:2591635] Multi-tasking -> Device: YES, App: YES
+2015-05-16 20:27:44.470 wheresApp[37503:2591635] Unlimited access to network resources
+2015-05-16 20:27:44.625 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:27:44.992 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/#/login
+2015-05-16 20:29:59.405 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:29:59.760 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/#/tab/items/-JpPrUAqqXIReCIe-eYt
+2015-05-16 20:30:25.014 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:30:25.205 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=169517#/login
+2015-05-16 20:31:10.846 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:31:11.091 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=169517#/tab/items/-JpPjnHBxXDy8lrpN08b
+2015-05-16 20:31:25.882 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:31:26.079 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/login
+2015-05-16 20:33:38.208 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:33:38.522 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/additem
+2015-05-16 20:34:04.717 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:34:04.965 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/additem
+2015-05-16 20:36:02.570 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:36:02.893 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/additem
+2015-05-16 20:36:51.218 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:36:52.414 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/additem
+2015-05-16 20:37:57.945 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:37:59.707 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/additem
+2015-05-16 20:38:11.946 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:38:12.221 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/additem
+2015-05-16 20:38:59.025 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:38:59.282 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/tab/items
+2015-05-16 20:39:09.598 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:39:09.824 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/tab/items
+2015-05-16 20:39:31.770 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:39:32.031 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/additem
+2015-05-16 20:39:43.363 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:39:43.750 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/tab/items
+2015-05-16 20:39:48.398 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:39:48.588 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/tab/items
+2015-05-16 20:46:04.632 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:46:04.977 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=113745#/tab/items
+2015-05-16 20:48:17.414 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:48:17.564 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=735380#/login
+2015-05-16 20:48:43.903 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:48:44.076 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=737252#/login
+2015-05-16 20:49:50.632 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:49:50.799 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/login
+2015-05-16 20:55:39.836 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 20:55:40.132 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:02:46.087 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:02:48.743 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:03:32.933 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:03:35.504 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:06:21.988 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:06:22.293 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:07:02.890 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:07:03.208 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:08:06.851 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:08:07.189 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:09:19.399 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:09:20.884 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:09:42.502 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:09:43.542 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:10:34.817 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:10:35.605 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:10:55.791 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:10:56.033 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:12:07.068 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:12:07.337 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:12:30.448 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:12:30.632 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:13:13.633 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:13:13.917 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:13:59.112 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:13:59.453 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:14:07.786 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:14:07.985 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:14:16.058 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:14:16.345 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:14:37.625 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:14:37.821 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:14:44.387 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:14:44.560 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:15:05.674 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:15:05.851 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:15:20.190 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:15:20.382 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:15:25.029 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:15:25.203 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:15:32.885 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:15:33.068 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:15:42.434 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:15:42.746 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:16:16.285 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:16:16.540 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:16:23.339 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:16:23.569 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:17:49.407 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:17:49.670 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=336749#/additem
+2015-05-16 21:19:47.412 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:19:47.573 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=779814#/login
+2015-05-16 21:28:58.801 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:28:59.102 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=779814#/tab/items/-JpUemrW2MtxQSViuv3L
+2015-05-16 21:29:11.640 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:29:11.780 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/login
+2015-05-16 21:40:38.176 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:40:38.478 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 21:41:16.505 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:41:16.752 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 21:42:16.823 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:42:19.588 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 21:47:54.566 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:48:07.639 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 21:54:13.505 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:54:14.638 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 21:54:42.409 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 21:54:42.649 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:04:21.383 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:04:21.729 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:20:31.271 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:20:31.608 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:21:56.595 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:21:56.926 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:23:23.989 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:23:24.360 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:25:30.811 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:25:31.138 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:25:41.302 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:25:41.540 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:26:32.821 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:26:33.135 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:29:14.184 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:29:14.558 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:32:23.229 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:32:23.539 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:32:43.600 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:32:43.816 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=570085#/tab/items
+2015-05-16 22:32:49.827 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:32:50.151 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=950459#/login
+2015-05-16 22:33:27.154 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:33:27.465 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=950459#/login
+2015-05-16 22:36:20.244 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:36:20.596 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=950459#/tab/items
+2015-05-16 22:36:44.129 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:36:44.325 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=950459#/tab/items
+2015-05-16 22:37:00.550 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:37:00.750 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=950459#/tab/items
+2015-05-16 22:37:38.295 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:37:38.608 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=950459#/tab/items
+2015-05-16 22:37:59.733 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:37:59.914 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=480973#/login
+2015-05-16 22:39:21.672 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:39:21.998 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=480973#/tab/items
+2015-05-16 22:39:28.739 wheresApp[37503:2591635] Resetting plugins due to page load.
+2015-05-16 22:39:28.874 wheresApp[37503:2591635] Finished load of: http://192.168.1.127:8100/?restart=377518#/login
+2015-05-16 22:40:06.611 wheresApp[37503:2654148] Terminating since there is no system app.
+2015-05-16 22:40:21.438 wheresApp[41677:2655147] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jgormley/Library/Developer/CoreSimulator/Devices/4C6CDEBF-1B02-4BE4-AEC0-9666E48C33EC/data/Containers/Data/Application/0929B8DF-0BD3-4F2C-A000-3E998A72DF55/Library/Cookies/Cookies.binarycookies
+2015-05-16 22:40:21.540 wheresApp[41677:2655147] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-16 22:40:21.541 wheresApp[41677:2655147] Multi-tasking -> Device: YES, App: YES
+2015-05-16 22:40:21.543 wheresApp[41677:2655147] Unlimited access to network resources
+2015-05-16 22:40:21.703 wheresApp[41677:2655147] Resetting plugins due to page load.
+2015-05-16 22:40:22.215 wheresApp[41677:2655147] Finished load of: http://192.168.1.127:8100/#/login
+2015-05-16 22:40:25.747 wheresApp[41677:2655147] THREAD WARNING: ['Geolocation'] took '3496.810303' ms. Plugin should use a background thread.
+2015-05-16 22:42:01.531 wheresApp[41677:2655147] Resetting plugins due to page load.
+2015-05-16 22:42:01.774 wheresApp[41677:2655147] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 22:42:43.738 wheresApp[42014:2656733] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jgormley/Library/Developer/CoreSimulator/Devices/4C6CDEBF-1B02-4BE4-AEC0-9666E48C33EC/data/Containers/Data/Application/BBE00031-4592-4380-A59C-D4C869A7688E/Library/Cookies/Cookies.binarycookies
+2015-05-16 22:42:43.860 wheresApp[42014:2656733] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-16 22:42:43.860 wheresApp[42014:2656733] Multi-tasking -> Device: YES, App: YES
+2015-05-16 22:42:43.862 wheresApp[42014:2656733] Unlimited access to network resources
+2015-05-16 22:42:43.995 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 22:42:44.444 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/#/login
+2015-05-16 22:43:56.233 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 22:43:56.518 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 22:53:17.093 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 22:53:17.357 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 22:55:04.488 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 22:55:04.793 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 22:55:31.126 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 22:55:31.255 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 22:59:19.169 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 22:59:19.529 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 22:59:30.369 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 22:59:30.483 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/login
+2015-05-16 23:17:53.263 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:17:53.552 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:19:38.658 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:19:38.935 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:20:24.635 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:20:24.863 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:24:31.960 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:24:32.228 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:25:49.730 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:25:49.967 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:26:06.886 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:26:07.016 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:27:03.448 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:27:03.665 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:28:56.499 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:28:56.781 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:33:01.589 wheresApp[42014:2656733] Resetting plugins due to page load.
+2015-05-16 23:33:01.834 wheresApp[42014:2656733] Finished load of: http://192.168.1.127:8100/?restart=490272#/tab/items
+2015-05-16 23:38:37.152 wheresApp[43849:2681544] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jgormley/Library/Developer/CoreSimulator/Devices/4C6CDEBF-1B02-4BE4-AEC0-9666E48C33EC/data/Containers/Data/Application/4A6842E1-0705-41A8-8DB0-C7A47A172F24/Library/Cookies/Cookies.binarycookies
+2015-05-16 23:38:37.250 wheresApp[43849:2681544] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-16 23:38:37.250 wheresApp[43849:2681544] Multi-tasking -> Device: YES, App: YES
+2015-05-16 23:38:37.252 wheresApp[43849:2681544] Unlimited access to network resources
+2015-05-16 23:38:37.392 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:38:38.311 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/login
+2015-05-16 23:38:40.632 wheresApp[43849:2681544] THREAD WARNING: ['Geolocation'] took '2288.051758' ms. Plugin should use a background thread.
+2015-05-16 23:39:34.958 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:39:35.357 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 23:46:44.423 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:46:44.753 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 23:47:19.275 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:47:19.464 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 23:47:41.257 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:47:41.454 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 23:48:04.055 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:48:04.231 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 23:51:32.380 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:51:32.707 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 23:53:28.318 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:53:29.179 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 23:54:25.260 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:54:25.551 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/items
+2015-05-16 23:55:07.944 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:55:08.256 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/info
+2015-05-16 23:55:09.239 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:55:09.452 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/info
+2015-05-16 23:55:58.061 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:55:58.303 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/info
+2015-05-16 23:57:44.084 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:57:44.349 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/info
+2015-05-16 23:58:58.440 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-16 23:58:58.699 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/info
+2015-05-17 00:01:58.673 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:01:58.936 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/info
+2015-05-17 00:07:03.804 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:07:04.063 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:07:20.424 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:07:20.570 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:08:08.135 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:08:08.384 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:11:09.704 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:11:10.026 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:12:25.932 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:12:26.228 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:12:41.776 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:12:42.053 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:21:51.915 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:21:52.244 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:22:36.852 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:22:37.213 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:23:15.542 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:23:15.766 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:23:27.930 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:23:28.121 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:25:32.489 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:25:33.193 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:27:53.056 wheresApp[43849:2681544] Resetting plugins due to page load.
+2015-05-17 00:27:53.401 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map

@@ -6,15 +6,11 @@
 -->
 <ion-view view-title="{{item.name}}">
   <ion-content class="">
-    <h3>
-      {{item.name}}
-    </h3>
-    <p>
-      {{item.description}}
-    </p>
-    <p>
-      {{item.location.lat}}, {{item.location.long}}
-    </p>
+    <div class="card padding">
+      <h3>{{item.name}}</h3>
+      <p>{{item.description}}</p>
+      <p>{{item.distance}} miles away</p>
+    </div>
     
     <div id="mapContainer">
       <div id="map" data-tap-disabled="true"></div>

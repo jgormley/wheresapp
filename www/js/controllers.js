@@ -70,8 +70,7 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
 .controller('InfoCtrl', function($scope) {})
 
 .controller('AddItemCtrl', function($scope, $state, $ionicLoading, $compile, Items) {
-  // TODO: put the model object somewhere reusable
-  $scope.item = {"name": "", "description": "", "location": {"long": "", "lat": ""}};
+  $scope.item = Items.newItem();
   
   $scope.centerMapOnUser = function() {
     if(!$scope.map) {
@@ -104,28 +103,57 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   $scope.addItem = function(item) {
     Items.add(item);
     // clear out the model object so the next time we add an item, the form is reset
-    $scope.item = {"name": "", "description": "", "location": {"long": "", "lat": ""}};
+    $scope.item = Items.newItem();
     $state.go('tab.items');
   };
   
   $scope.cancel = function(){
     $state.go('tab.items');
+    // clear out the model object so the next time we add an item, the form is reset
+    $scope.item = Items.newItem();
   };
   
-  $scope.initialize = function() {
-    console.log('initialize map');
+  
+  /**
+   * The CenterControl adds a control to the map that recenters the map on Chicago.
+   * This constructor takes the control DIV as an argument.
+   * @constructor
+   */
+  function CenterControl(controlDiv, map) {
+
+    // Set CSS for the control border
+    var controlUI = document.createElement('div');
+    controlUI.style.backgroundColor = '#fff';
+    controlUI.style.borderRadius = '5px';
+    controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+    controlUI.style.margin = '0.5em';
+    controlUI.style.padding = '0.1em';
+    controlUI.style.textAlign = 'center';
+    controlDiv.appendChild(controlUI);
     
-    var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+    var controlLink = document.createElement('a');
+    controlLink.className = 'button button-icon icon ion-pinpoint map-float-over';
+    controlUI.appendChild(controlLink);
+    
+    google.maps.event.addDomListener(controlUI, 'click', function() {
+      $scope.centerMapOnUser();
+    });
+
+  }
+  
+  $scope.initialize = function() {
+    var myLatLong = new google.maps.LatLng(43.07493,-89.381388);
     
     var mapOptions = {
-      center: myLatlng,
+      center: myLatLong,
       zoom: 16,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true
     };
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
     $scope.marker = new google.maps.Marker({
-      position: myLatlng,
+      position: myLatLong,
       map: map,
       draggable:true
     });
@@ -136,6 +164,15 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
       $scope.item.location.long = latLong.lng();
       $scope.$apply();
     });
+    
+    // Create the DIV to hold the control and
+    // call the CenterControl() constructor passing
+    // in this DIV.
+    var centerControlDiv = document.createElement('div');
+    var centerControl = new CenterControl(centerControlDiv, map);
+
+    centerControlDiv.index = 1;
+    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(centerControlDiv);
     
     $scope.map = map;
     
@@ -154,6 +191,61 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   }
 })
 
+.controller('MapCtrl', function($scope, $state, $stateParams, $compile, Items, Session) {
+  $scope.items = Items.all();
+  
+  $scope.remove = function(item) {
+    Items.remove(item);
+  };
+  
+  $scope.clickTest = function() {
+    // $scope.item = Items.get($stateParams.itemId);
+    alert('Example of infowindow with ng-click: ' + $stateParams.itemId);
+  };
+  
+  $scope.initialize = function() {
+    var mapOptions = {
+      center: Session.getCurrentLocation(),
+      zoom: 10,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    
+    for (var i=0; i<$scope.items.length; i++){
+      var thisItem = $scope.items[i];
+      var thisItemLatLong = new google.maps.LatLng(thisItem.location.lat, thisItem.location.long);
+      
+      //Marker + infowindow + angularjs compiled ng-click
+      var contentString = "<div><a ng-click='clickTest()'>" + thisItem.name + "</a></div>";
+      var compiled = $compile(contentString)($scope);
+
+      var infowindow = new google.maps.InfoWindow({
+        content: compiled[0]
+      });
+
+      var marker = new google.maps.Marker({
+        position: thisItemLatLong,
+        map: map,
+        title: thisItem.name,
+        draggable:false
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        console.log(marker);
+        infowindow.open(map,marker);
+      });
+    }
+    
+    $scope.map = map;
+  }
+  
+  // TODO: is there a better way to kick off the init method?
+  $scope.items.$loaded().then(function(array) {
+    $scope.initialize();
+  });
+})
+
 .controller('ItemDetailCtrl', function($scope, $state, $stateParams, Items) {
   $scope.item = Items.get($stateParams.itemId);
 
@@ -163,20 +255,18 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   };
   
   $scope.initialize = function() {
-    console.log('initialize map');
-    
-    var myLatlng = new google.maps.LatLng($scope.item.location.lat,$scope.item.location.long);
-    console.log(myLatlng);
+    var myLatLong = new google.maps.LatLng($scope.item.location.lat,$scope.item.location.long);
     
     var mapOptions = {
-      center: myLatlng,
+      center: myLatLong,
       zoom: 16,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true
     };
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
     $scope.marker = new google.maps.Marker({
-      position: myLatlng,
+      position: myLatLong,
       map: map,
       draggable:false
     });
