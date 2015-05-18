@@ -200,7 +200,8 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   
   $scope.clickTest = function() {
     // $scope.item = Items.get($stateParams.itemId);
-    alert('Example of infowindow with ng-click: ' + $stateParams.itemId);
+    console.log('clickTest', $stateParams);
+    alert('Example of infoWindow with ng-click: ' + $stateParams.itemId);
   };
   
   $scope.initialize = function() {
@@ -212,18 +213,21 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
     };
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     $scope.markers = [];
+    $scope.infoWindows = [];
     
     for (var i=0; i<$scope.items.length; i++){
       var thisItem = $scope.items[i];
       var thisItemLatLong = new google.maps.LatLng(thisItem.location.lat, thisItem.location.long);
       
-      //Marker + infowindow + angularjs compiled ng-click
+      //Marker + infoWindow + angularjs compiled ng-click
       var contentString = "<div><a ng-click='clickTest()'>" + thisItem.name + "</a></div>";
       var compiled = $compile(contentString)($scope);
-
-      var infowindow = new google.maps.InfoWindow({
+      
+      var thisInfoWindow = new google.maps.InfoWindow({
         content: compiled[0]
       });
+      
+      $scope.infoWindows.push(thisInfoWindow);
 
       var marker = new google.maps.Marker({
         position: thisItemLatLong,
@@ -233,15 +237,17 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
       });
       
       $scope.markers.push(marker);
-
+      
+      // listen for a click on marker
       google.maps.event.addListener(marker, 'click', function(e) {
-        console.log(e);
         for (var j in $scope.markers){
           var thisMarker = $scope.markers[j];
-          console.log(thisMarker);
-          //if (thisMarker.latLng.A == )
+          var thisInfoWindow = $scope.infoWindows[j];
+          if (thisMarker.position.A == e.latLng.A && thisMarker.position.F == e.latLng.F){
+            thisInfoWindow.open(map,thisMarker);
+            break;
+          }
         }
-        infowindow.open(map,obj);
       });
     }
     
