@@ -142,10 +142,10 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   }
   
   $scope.initialize = function() {
-    var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+    var myLatLong = new google.maps.LatLng(43.07493,-89.381388);
     
     var mapOptions = {
-      center: myLatlng,
+      center: myLatLong,
       zoom: 16,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true
@@ -153,7 +153,7 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
     $scope.marker = new google.maps.Marker({
-      position: myLatlng,
+      position: myLatLong,
       map: map,
       draggable:true
     });
@@ -184,13 +184,70 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
 })
 
 .controller('ItemsCtrl', function($scope, $state, Items) {
-  console.log('Items controller');
   $scope.items = Items.all();
-  console.log('Items controller, items: ', $scope.items, $scope.items.length);
   
   $scope.remove = function(item) {
     Items.remove(item);
   }
+})
+
+.controller('MapCtrl', function($scope, $state, $stateParams, $compile, Items, Session) {
+  $scope.items = Items.all();
+  
+  $scope.remove = function(item) {
+    Items.remove(item);
+  };
+  
+  $scope.clickTest = function() {
+    // $scope.item = Items.get($stateParams.itemId);
+    alert('Example of infowindow with ng-click: ' + $stateParams.itemId);
+  };
+  
+  $scope.initialize = function() {
+    var mapOptions = {
+      center: Session.getCurrentLocation(),
+      zoom: 10,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: true
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    
+    for (var i=0; i<$scope.items.length; i++){
+      var thisItem = $scope.items[i];
+      var thisItemLatLong = new google.maps.LatLng(thisItem.location.lat, thisItem.location.long);
+      
+      //Marker + infowindow + angularjs compiled ng-click
+      var contentString = "<div><a ng-click='clickTest()'>" + thisItem.name + "</a></div>";
+      var compiled = $compile(contentString)($scope);
+
+      var infowindow = new google.maps.InfoWindow({
+        content: compiled[0]
+      });
+
+      var marker = new google.maps.Marker({
+        position: thisItemLatLong,
+        map: map,
+        title: thisItem.name,
+        draggable:false
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        console.log(marker);
+        for (var j in marker){
+          console.log(j, marker[j]);
+        }
+        console.log('_____');
+        infowindow.open(map,marker);
+      });
+    }
+    
+    $scope.map = map;
+  }
+  
+  // TODO: is there a better way to kick off the init method?
+  $scope.items.$loaded().then(function(array) {
+    $scope.initialize();
+  });
 })
 
 .controller('ItemDetailCtrl', function($scope, $state, $stateParams, Items) {
@@ -202,10 +259,10 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
   };
   
   $scope.initialize = function() {
-    var myLatlng = new google.maps.LatLng($scope.item.location.lat,$scope.item.location.long);
+    var myLatLong = new google.maps.LatLng($scope.item.location.lat,$scope.item.location.long);
     
     var mapOptions = {
-      center: myLatlng,
+      center: myLatLong,
       zoom: 16,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true
@@ -213,7 +270,7 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
     $scope.marker = new google.maps.Marker({
-      position: myLatlng,
+      position: myLatLong,
       map: map,
       draggable:false
     });

@@ -211,6 +211,7 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
       disableDefaultUI: true
     };
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    $scope.markers = [];
     
     for (var i=0; i<$scope.items.length; i++){
       var thisItem = $scope.items[i];
@@ -230,10 +231,17 @@ angular.module('wheresapp.controllers', ['ionic', 'wheresapp.controllers', 'wher
         title: thisItem.name,
         draggable:false
       });
+      
+      $scope.markers.push(marker);
 
-      google.maps.event.addListener(marker, 'click', function() {
-        console.log(marker);
-        infowindow.open(map,marker);
+      google.maps.event.addListener(marker, 'click', function(e) {
+        console.log(e);
+        for (var j in $scope.markers){
+          var thisMarker = $scope.markers[j];
+          console.log(thisMarker);
+          //if (thisMarker.latLng.A == )
+        }
+        infowindow.open(map,obj);
       });
     }
     

@@ -17,19 +17,11 @@ angular.module('wheresapp.services', ['firebase'])
       console.log(i, array[i]);
       var item = array[i];
       var thisLatLong = new google.maps.LatLng( item.location.lat, item.location.long );
-      var distance = google.maps.geometry.spherical.computeDistanceBetween(Session.getCurrentLocation(), thisLatLong);
-      console.log('distance: ', distance);
-      item.distance = distance;
+      var distanceInMeters = google.maps.geometry.spherical.computeDistanceBetween(Session.getCurrentLocation(), thisLatLong);
+      var distanceInMiles = (Math.round((distanceInMeters * 0.000621371) * 100))/100;
+      console.log('distance: ', distanceInMiles);
+      item.distance = distanceInMiles;
     };
-    
-    // for (var i in array){
-    //   var item = array[i];
-    //   console.log(i);
-    //   var thisLatLong = new google.maps.LatLng( item.location.lat, item.location.long );
-    //   var distance = google.maps.geometry.spherical.computeDistanceBetween(Session.getCurrentLocation(), thisLatLong);
-    //   console.log('distance: ', distance);
-    //   item.distance = distance;
-    // };
 
     sortedItems = items.sort(function(a,b){
       if(a.distance > b.distance) return 1;
@@ -52,7 +44,6 @@ angular.module('wheresapp.services', ['firebase'])
       }
     },
     all: function () {
-      console.log('get all items');
       return items;
     },
     remove: function (item) {

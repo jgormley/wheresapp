@@ -385,3 +385,15 @@
 2015-05-17 00:25:33.193 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
 2015-05-17 00:27:53.056 wheresApp[43849:2681544] Resetting plugins due to page load.
 2015-05-17 00:27:53.401 wheresApp[43849:2681544] Finished load of: http://192.168.1.127:8100/#/tab/map
+2015-05-17 00:35:49.560 wheresApp[43849:2712496] Communications error: <OS_xpc_error: <error: 0x2e105f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2e1083c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-05-17 00:36:46.083 wheresApp[45786:2713467] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jgormley/Library/Developer/CoreSimulator/Devices/4C6CDEBF-1B02-4BE4-AEC0-9666E48C33EC/data/Containers/Data/Application/6479DF76-1819-4709-BDB7-EDF06F7A8618/Library/Cookies/Cookies.binarycookies
+2015-05-17 00:36:46.235 wheresApp[45786:2713467] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-17 00:36:46.236 wheresApp[45786:2713467] Multi-tasking -> Device: YES, App: YES
+2015-05-17 00:36:46.238 wheresApp[45786:2713467] Unlimited access to network resources
+2015-05-17 00:36:46.392 wheresApp[45786:2713467] Resetting plugins due to page load.
+2015-05-17 00:36:46.904 wheresApp[45786:2713467] Finished load of: http://192.168.1.127:8100/#/login
+2015-05-17 00:36:49.144 wheresApp[45786:2713467] THREAD WARNING: ['Geolocation'] took '2201.772949' ms. Plugin should use a background thread.
+2015-05-17 00:38:51.387 wheresApp[45786:2713467] Resetting plugins due to page load.
+2015-05-17 00:38:51.685 wheresApp[45786:2713467] Finished load of: http://192.168.1.127:8100/#/tab/map
